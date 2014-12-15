@@ -1,0 +1,16 @@
+{
+  "name": "git_typos",
+  "version": "0.0.0",
+  "main": "bot.js",
+  "description": "A clumsy twitter bot",
+  "author": "Jenna Zeigen <jenna.zeigen@gmail.com>",
+  "dependencies": {
+    "levenshtein": "^1.0.5",
+    "twit":"^1.1.18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jennazee/git_typos.git"
+  },
+  "engine": "*"
+}
