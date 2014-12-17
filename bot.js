@@ -32,9 +32,13 @@ function bot(typos) {
   })
 
   postStatus();
-  setTimeout(postStatus, 6*60*60*1000);
+  intID = setInterval(postStatus, 6*60*60*1000);
 
   function postStatus() {
+    if (typos.length === 0) {
+      clearInterval(intID);
+      return;
+    }
     T.post('statuses/update', { status: 'git ' + typos.shift()}, function(err, data, resp) {
       if (err) {
         console.log(err);
